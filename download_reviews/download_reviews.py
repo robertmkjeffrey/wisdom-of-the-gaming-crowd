@@ -18,7 +18,8 @@ def get_reviews(app_id: int, page: int, max_attempts: int = 10) -> dict:
         if response.status_code == 200:
             return response.json()["reviews"]
         # If rate limited, wait and try again
-        time.sleep((2 ** attempts) + random.random())
+        print(f"Sleeping for {2 * attempts}s")
+        time.sleep((2 * attempts) + random.random())
         attempts = attempts + 1
     print(f"Unable to retrieve reviews for app_id = {app_id}")
     return []
@@ -38,5 +39,5 @@ for app_id in app_id_list:
             bar.update(1)
     # Dump results 
     with open(f'../../reviews/{app_id}.json', 'w') as fout:
-        json.dump()
+        json.dump(app_reviews, fout)
         
