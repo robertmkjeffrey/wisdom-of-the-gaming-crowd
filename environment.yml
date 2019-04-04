@@ -1,0 +1,8 @@
+name: COMP3770-Steam-Feature-Reviews
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - tqdm
+prefix: C:\Users\rober\Anaconda3\envs\COMP3770-Steam-Feature-Reviews
+
