@@ -46,6 +46,14 @@ Finally, open jupyter notebook:
 jupyter notebook
 ```
 
+If installing without anaconda, the following libraries are required:
+
+* jupyter
+* pandas
+* nltk
+* requests
+* tqdm
+
 ### Generating Feature Summaries
 First, identify the Steam `app_id` for the video game(s) of interest. This can be obtained from the URL of the Steam page. For example:
 
